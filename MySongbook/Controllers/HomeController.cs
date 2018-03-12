@@ -30,9 +30,18 @@ namespace MySongbook.Controllers
 			return View();
 		}
 
+		public ActionResult Success()
+		{
+			return View();
+		}
+
 		[HttpPost]
 		public ActionResult SubmitSong(Song song)
 		{
+			SongBookDAL dal = new SongBookDAL();
+
+			dal.InputSongs(song);
+
 			return RedirectToAction("Success");
 		}
 

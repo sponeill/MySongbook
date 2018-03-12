@@ -39,9 +39,31 @@ namespace MySongbook.DAL
 			return allSongs;
 		}
 
-		public static void InputSongs()
+		public void InputSongs(Song song)
 		{
-			
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connectionString))
+				{
+					conn.Open();
+					SqlCommand cmd = new SqlCommand("INSERT INTO song(title, composer, lyricist, source_material, genre, gender, voice_part) " +
+						"VALUES(@Title, @Composer, @Lyricist, @Source, @Genre, @Gender, @VoicePart);", conn);
+					cmd.Parameters.AddWithValue("@Title", song.Title);
+					cmd.Parameters.AddWithValue("@Composer", song.Composer);
+					cmd.Parameters.AddWithValue("@Lyricist", song.Lyricist);
+					cmd.Parameters.AddWithValue("@Source", song.Source);
+					cmd.Parameters.AddWithValue("@Genre", song.Genre);
+					cmd.Parameters.AddWithValue("@Gender", song.Gender);
+					cmd.Parameters.AddWithValue("@VoicePart", song.VoicePart);
+
+					cmd.ExecuteNonQuery();
+				}
+
+			}
+			catch(SqlException ex)
+			{
+				Console.WriteLine(ex);
+			}
 
 		}
 
