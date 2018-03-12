@@ -13,18 +13,33 @@ namespace MySongbook.Controllers
 			return View();
 		}
 
-		public ActionResult About()
-		{
-			ViewBag.Message = "Your application description page.";
-
-			return View();
-		}
-
 		public ActionResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";
 
 			return View();
+		}
+
+		public ActionResult Forum()
+		{
+			return View();
+		}
+
+		public ActionResult SubmitSong()
+		{
+			return View();
+		}
+
+		public ActionResult FindSong()
+		{
+			return View();
+		}
+
+		public ActionResult DisplayAllSongs()
+		{
+			var songs = new List<MySongbook.Models.Song>(); //BUILD DAL
+
+			return View("DisplayAllSongs", songs);
 		}
 	}
 }
