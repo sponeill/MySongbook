@@ -50,6 +50,15 @@ namespace MySongbook.Controllers
 			return View();
 		}
 
+		public ActionResult SearchResult(SongSearchModel search)
+		{
+			SongBookDAL dal = new SongBookDAL();
+
+			var songs = dal.SearchSongs(search.Title, search.Composer, search.Lyricist, search.Source, search.Genre, search.Gender, search.VoicePart);
+
+			return View("SearchResult", songs);
+		}
+
 		public ActionResult DisplayAllSongs(SongBookDAL dal)
 		{
 			var songs = dal.ReturnAllSongs();

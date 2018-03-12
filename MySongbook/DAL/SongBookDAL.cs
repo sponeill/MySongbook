@@ -62,8 +62,99 @@ namespace MySongbook.DAL
 			}
 			catch(SqlException ex)
 			{
-				Console.WriteLine(ex);
+				throw;
 			}
+
+		}
+
+		public List<Song> SearchSongs(string title, string composer, string lyricist, string source, string genre, string gender, string voicepart)
+		{
+			List<Song> results = new List<Song>();
+
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connectionString))
+				{
+					conn.Open();
+					SqlCommand cmd = BuildSqlCommand(title, composer, lyricist, source, genre, gender, voicepart);
+					cmd.Connection = conn;
+
+					SqlDataReader reader = cmd.ExecuteReader();
+
+					while(reader.Read())
+					{
+						Song song = MapRowToSong(reader);
+						results.Add(song);
+					}
+				}
+			}
+			catch(SqlException ex)
+			{
+				throw;
+			}
+
+			return results;
+		}
+
+		private SqlCommand BuildSqlCommand(string title, string composer, string lyricist, string source, string genre, string gender, string voicepart)
+		{
+			SqlCommand cmd = new SqlCommand();
+			string sql = "SELECT * FROM song WHERE ";
+			string logicOperator = "";
+
+			if (!String.IsNullOrEmpty(title))
+			{
+				sql += $"{logicOperator} title LIKE @title ";
+				cmd.Parameters.AddWithValue("@title", "%" + title + "%");
+				logicOperator = "AND";
+			}
+
+			if (!String.IsNullOrEmpty(composer))
+			{
+				sql += $"{logicOperator} composer LIKE @composer ";
+				cmd.Parameters.AddWithValue("@composer", "%" + composer + "%");
+				logicOperator = "AND";
+			}
+
+			if(!String.IsNullOrEmpty(lyricist))
+			{
+				sql += $"{logicOperator} lyricist LIKE @lyricist ";
+				cmd.Parameters.AddWithValue("@lyricist", "%" + lyricist + "%");
+				logicOperator = "AND";
+			}
+
+			if (!String.IsNullOrEmpty(source))
+			{
+				sql += $"{logicOperator} source_material LIKE @source ";
+				cmd.Parameters.AddWithValue("@source", "%" + source + "%");
+				logicOperator = "AND"; 
+			}
+
+			if (!String.IsNullOrEmpty(genre))
+			{
+				sql += $"{logicOperator} genre LIKE @genre ";
+				cmd.Parameters.AddWithValue("@genre", genre);
+				logicOperator = "AND";
+			}
+
+			if (!String.IsNullOrEmpty(gender))
+			{
+				sql += $"{logicOperator} gender LIKE @gender ";
+				cmd.Parameters.AddWithValue("@gender", gender);
+				logicOperator = "AND";
+			}
+
+			if (!String.IsNullOrEmpty(voicepart))
+			{
+				sql += $"{logicOperator} voice_part LIKE @voicepart ";
+				cmd.Parameters.AddWithValue("@voicepart", voicepart);
+			}
+
+			sql += ";";
+
+			cmd.CommandText = sql;
+
+			return cmd;
 
 		}
 

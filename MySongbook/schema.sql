@@ -83,7 +83,7 @@ CREATE TABLE Song
 	lyricist varchar(50), 
 	source_material varchar(30),
 	genre varchar(40) not null,
-	gender varchar(10), 
+	gender varchar(15), 
 	voice_part varchar(20), 
 
 	CONSTRAINT pk_songnumber PRIMARY KEY(song_number),
@@ -122,3 +122,5 @@ INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voi
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('The Light in the Piazza', 'Guettel, Adam', 'Guettel, Adam', 'The Light in the Piazza', 'Contemporary Musical Theatre Ballad', 'Female', 'Soprano')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Barely Breathing', 'Sheik, Duncan', 'Sheik, Duncan', 'Duncan Sheik', 'Pop/Rock/Country', 'Male', 'Bari-Tenor')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Perfect', 'Morissette, Alanis', 'Morissette, Alanis', 'Alanis Morissette', 'Pop/Rock/Country', 'Female', 'Mezzo')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Go the Distance', 'Menken, Alan', 'Zippel, David', 'Hercules', 'Disney', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('One Second and a Million Miles', 'Brown, Jason Robert', 'Brown, Jason Robert', 'The Bridges of Madison County', 'Contemporary Musical Theatre Ballad', 'Either/Both', 'Duet')

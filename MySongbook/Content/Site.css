@@ -44,3 +44,7 @@ tr:nth-child(odd){
 	vertical-align: top;
 	margin-right: 25px;
 }
+
+#SearchResults{
+	width: 100%;
+}

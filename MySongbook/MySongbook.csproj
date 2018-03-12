@@ -213,6 +213,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SearchParam.cs" />
     <Compile Include="Models\Song.cs" />
+    <Compile Include="Models\SongSearchModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -274,6 +275,7 @@
     <Content Include="Views\Home\FindSong.cshtml" />
     <Content Include="Views\Home\SubmitSong.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
+    <Content Include="Views\Home\SearchResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
