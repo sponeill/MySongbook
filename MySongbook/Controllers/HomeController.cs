@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MySongbook.DAL;
 
 namespace MySongbook.Controllers
 {
@@ -33,9 +34,9 @@ namespace MySongbook.Controllers
 			return View();
 		}
 
-		public ActionResult DisplayAllSongs()
+		public ActionResult DisplayAllSongs(SongBookDAL dal)
 		{
-			var songs = new List<MySongbook.Models.Song>(); //BUILD DAL
+			var songs = dal.ReturnAllSongs();
 
 			return View("DisplayAllSongs", songs);
 		}

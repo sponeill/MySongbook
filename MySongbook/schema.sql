@@ -74,3 +74,51 @@ CREATE NONCLUSTERED INDEX [IX_RoleId]
 
 
 -- Custom MySongbook Tables --
+
+CREATE TABLE Song
+(
+	song_number int identity(1, 1),
+	title varchar(40) not null,
+	composer varchar(50) not null, 
+	lyricist varchar(50), 
+	source_material varchar(30),
+	genre varchar(40) not null,
+	gender varchar(10), 
+	voice_part varchar(20), 
+
+	CONSTRAINT pk_songnumber PRIMARY KEY(song_number),
+);
+
+CREATE TABLE userInfo_song
+(
+	user_id nvarchar(128), 
+	song_number int, 
+
+	CONSTRAINT fk_userSong_userInfo FOREIGN KEY(user_id) REFERENCES AspNetUsers(Id),
+	CONSTRAINT fk_userSong_song FOREIGN KEY(song_number) REFERENCES song(song_number),
+	CONSTRAINT pk_userinfo_song PRIMARY KEY(user_id, song_number), 
+
+);
+
+-- Starter Song Data --
+
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Dancing Through Life', 'Schwartz, Stephen', 'Schwartz, Stephen','Wicked', 'Contemporary Musical Theatre Uptempo', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Journey to the Past', 'Flaherty, Stephen', 'Ahrens, Lynn', 'Anastasia', 'Contemporary Musical Theatre Ballad', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Dyin Aint So Bad', 'Wildhorn, Frank', 'Black, Don', 'Bonnie and Clyde', 'Contemporary Musical Theatre Ballad', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Much More', 'Schmidt, Harvey', 'Jones, Tom', 'The Fantasticks', 'Classical Musical Theatre Uptempo', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Cant Say No', 'Rodgers, Richard', 'Hammerstein II, Oscar', 'Oklahoma!', 'Classical Musical Theatre Uptempo', 'Female', 'Alto')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('It All Fades Away', 'Brown, Jason Robert', 'Brown, Jason Robert', 'The Bridges of Madison County', 'Contemporary Musical Theatre Ballad', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Il Mondo Era Vuoto', 'Guettel, Adam', 'Guettel, Adam', 'The Light in the Piazza', 'Contemporary Musical Theatre Ballad', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Im Not Afraid of Anything', 'Brown, Jason Robert', 'Brown, Jason Robert', 'Songs for a New World', 'Contemporary Musical Theatre Uptempo', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Youll Be Back', 'Miranda, Lin-Manuel', 'Mirand, Lin-Manuel', 'Hamilton', 'Contemporary Musical Theatre Uptempo', 'M', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Bring Him Home', 'Schonberg, Claude-Michel', 'Kretzmer, Herbert & Boublil, Alain', 'Les Miserables', 'Contemporary Musical Theatre Ballad', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Hold On', 'Simon, Lucy', 'Norman, Marsha', 'The Secret Garden', 'Contemporary Musical Theatre Ballad', 'Female', 'Alto')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Everlasting', 'Miller, Chris', 'Tysen, Nathan', 'Tuck Everlasting', 'Contemporary Musical Theatre Ballad', 'Female', 'Child')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Till I Hear You Sing', 'Webber, Andrew Lloyd', 'Slater, Glenn', 'Love Never Dies', 'Contemporary Musical Theatre Ballad', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Luck Be a Lady', 'Loesser, Frank', 'Loesser, Frank', 'Guys and Dolls', 'Classical Musical Theatre Uptempo', 'Male', 'Bass-Baritone')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Part of Your World', 'Menken, Alan', 'Ashman, Howard', 'The Little Mermaid', 'Disney', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('If I Didnt Believe In You', 'Brown, Jason Robert', 'Brown, Jason Robert', 'The Last Five Years', 'Contemporary Musical Theatre Ballad', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Goodbye', 'Salzman, Joshua', 'Cunningham, Ryan', 'I Love You Becuase', 'Contemporary Musical Theatre Uptempo', 'Male', 'Bari-Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('The Light in the Piazza', 'Guettel, Adam', 'Guettel, Adam', 'The Light in the Piazza', 'Contemporary Musical Theatre Ballad', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Barely Breathing', 'Sheik, Duncan', 'Sheik, Duncan', 'Duncan Sheik', 'Pop/Rock/Country', 'Male', 'Bari-Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Perfect', 'Morissette, Alanis', 'Morissette, Alanis', 'Alanis Morissette', 'Pop/Rock/Country', 'Female', 'Mezzo')

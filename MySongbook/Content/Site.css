@@ -26,3 +26,15 @@ textarea {
 #DisplayAllSongs {
 	width: 100%;
 }
+
+#songDetails {
+	font-size: 12px;
+}
+
+tr:nth-child(even){
+	background: #CCC;
+}
+
+tr:nth-child(odd){
+	background: #FFF;
+}
