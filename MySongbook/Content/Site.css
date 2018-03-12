@@ -38,3 +38,9 @@ tr:nth-child(even){
 tr:nth-child(odd){
 	background: #FFF;
 }
+
+#search {
+	display:inline-block;
+	vertical-align: top;
+	margin-right: 25px;
+}
