@@ -211,7 +211,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\SearchParam.cs" />
     <Compile Include="Models\Song.cs" />
     <Compile Include="Models\SongSearchModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -276,6 +275,8 @@
     <Content Include="Views\Home\SubmitSong.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
+    <Content Include="Views\Home\CorrectSong.cshtml" />
+    <Content Include="Views\Home\CorrectionSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
