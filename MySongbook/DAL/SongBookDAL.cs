@@ -39,6 +39,12 @@ namespace MySongbook.DAL
 			return allSongs;
 		}
 
+		public static void InputSongs()
+		{
+			
+
+		}
+
 		private static Song MapRowToSong(SqlDataReader reader)
 		{
 			Song song = new Song();

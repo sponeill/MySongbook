@@ -1,8 +1,52 @@
 ﻿
 @{
-    ViewBag.Title = "SubmitSong";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "SubmitSong";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	@model MySongbook.Models.Song
 }
 
 <h2>SubmitSong</h2>
 
+<form method="post" action="@Url.Action("SubmitSong", "Home")">
+
+	<p>Title: @Html.TextBoxFor(s => s.Title)</p>
+	<p>Composer: @Html.TextBoxFor(s => s.Composer)</p>
+	<p>Lyricist: @Html.TextBoxFor(s => s.Lyricist)</p>
+	<p>Source Material: @Html.TextBoxFor(s => s.Source)</p>
+	<p>
+		Category:
+		<select name="Genre">
+			<option value="Contemporary Musical Theatre Uptempo">Contemporary Musical Theatre Uptempo</option>
+			<option value="Contemporary Musical Theatre Ballad">Contemporary Musical Theatre Ballad</option>
+			<option value="Classical Musical Theatre Uptempo">Classical Musical Theatre Uptempo</option>
+			<option value="Classical Musical Theatre Ballad">Classical Musical Theatre Ballad</option>
+			<option value="Pop/Rock/Country">Pop/Rock/Country</option>
+			<option value="Jazz/Blues">Jazz/Blues</option>
+			<option value="Comedic">Comedic</option>
+			<option value="Disney">Disney</option>
+			<option value="Classical">Classical</option>
+		</select>
+	</p>
+	<p>
+		Gender:
+		<select name="Gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+			<option value="Either">Either</option>
+		</select>
+	</p>
+	<p>
+		Voice Part:
+		<select name="VoicePart">
+			<option value="Bass-Baritone">Bass-Baritone</option>
+			<option value="Bari-Tenor">Bari-Tenor</option>
+			<option value="Tenor">Tenor</option>
+			<option value="Alto">Alto</option>
+			<option value="Mezzo">Mezzo</option>
+			<option value="Soprano">Soprano</option>
+			<option value="Child">Child</option>
+		</select>
+
+	</p>
+
+</form>

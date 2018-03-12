@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MySongbook.DAL;
+using MySongbook.Models;
 
 namespace MySongbook.Controllers
 {
@@ -27,6 +28,12 @@ namespace MySongbook.Controllers
 		public ActionResult SubmitSong()
 		{
 			return View();
+		}
+
+		[HttpPost]
+		public ActionResult SubmitSong(Song song)
+		{
+			return RedirectToAction("Success");
 		}
 
 		public ActionResult FindSong()

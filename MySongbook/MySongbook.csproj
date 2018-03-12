@@ -273,6 +273,7 @@
     <Content Include="Views\Home\DisplayAllSongs.cshtml" />
     <Content Include="Views\Home\FindSong.cshtml" />
     <Content Include="Views\Home\SubmitSong.cshtml" />
+    <Content Include="Views\Home\Success.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
