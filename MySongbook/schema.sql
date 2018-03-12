@@ -1,8 +1,8 @@
-﻿CREATE DATABASE Project;
+﻿CREATE DATABASE MySongbook;
 
 GO
 
-USE Project;
+USE MySongbook;
 
 GO
 
@@ -72,3 +72,5 @@ CREATE NONCLUSTERED INDEX [IX_UserId]
 CREATE NONCLUSTERED INDEX [IX_RoleId]
     ON [dbo].[AspNetUserRoles]([RoleId] ASC);
 
+
+-- Custom MySongbook Tables --
