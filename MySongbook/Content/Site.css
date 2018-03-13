@@ -2,7 +2,7 @@
 body {
 	padding-top: 50px;
 	padding-bottom: 20px;
-	background: url('theatreseats.jpg') no-repeat fixed;
+	background: url('piano.jpg') no-repeat fixed;
 	background-size: 100% 100%;
 }
 
@@ -46,6 +46,8 @@ tr:nth-child(odd){
 	display:inline-block;
 	vertical-align: top;
 	margin-right: 25px;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 
 #SearchResults{
@@ -57,11 +59,11 @@ footer #Copywright {
 }
 
 .jumbotron {
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.6);
 }
 
 .pageBox {
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.6);
 	height: 500px;
 }
 
@@ -89,7 +91,16 @@ footer #Copywright {
 }
 
 .pageBoxFull {
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.6);
 	height: 100%;
 	width: 100%;
 }
+
+.inputForm{
+	background: #FFF;
+	width: 50%;
+	margin-left: 25px;
+	box-shadow: 1px 1px 3px black;
+	margin-top: 20px;
+}
+
