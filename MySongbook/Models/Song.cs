@@ -26,5 +26,27 @@ namespace MySongbook.Models
 
 			return result;
 		}
+
+		public string IsGender(string gender)
+		{
+			string result = "";
+			if(gender == Gender)
+			{
+				result = "selected='selected'";
+			}
+
+			return result;
+		}
+
+		public string IsVoicePart(string voicepart)
+		{
+			string result = "";
+			if(voicepart == VoicePart)
+			{
+				result = "selected='selected'";
+			}
+
+			return result;
+		}
 	}
 }

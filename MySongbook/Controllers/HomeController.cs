@@ -75,5 +75,16 @@ namespace MySongbook.Controllers
 
 			return View("UpdateEntry", song);
 		}
+
+		[HttpPost]
+		public ActionResult UpdateEntry(Song song)
+		{
+			SongBookDAL dal = new SongBookDAL();
+
+			dal.UpdateSong(song);
+
+			return RedirectToAction("Success");
+		}
+		
 	}
 }

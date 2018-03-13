@@ -35,7 +35,7 @@
 
 <br />
 
-<form method="post" action="@Url.Action("SubmitSong", "Home")">
+<form method="post" action="@Url.Action("UpdateEntry", "Home")">
 	<div id="search">
 		<p>Title:<br /> @Html.TextBoxFor(s => s.Title, new { placeholder = "Enter the Song Title" })</p>
 		<p>Composer:<br /> @Html.TextBoxFor(s => s.Composer, new { placeholder = "Last, First" })</p>
@@ -60,25 +60,26 @@
 		<p>
 			Gender:<br />
 			<select name="Gender">
-				<option value="Male">Male</option>
-				<option value="Female">Female</option>
-				<option value="Either/Both">Either/Both</option>
+				<option @Model.IsGender("Male") value="Male">Male</option>
+				<option @Model.IsGender("Female") value="Female">Female</option>
+				<option @Model.IsGender("Either/Both") value="Either/Both">Either/Both</option>
 			</select>
 		</p>
 		<p>
 			Voice Part:<br />
 			<select name="VoicePart">
-				<option value="Bass-Baritone">Bass-Baritone</option>
-				<option value="Bari-Tenor">Bari-Tenor</option>
-				<option value="Tenor">Tenor</option>
-				<option value="Alto">Alto</option>
-				<option value="Mezzo">Mezzo</option>
-				<option value="Soprano">Soprano</option>
-				<option value="Child">Child</option>
-				<option value="Duet">Duet</option>
+				<option @Model.IsVoicePart("Bass-Baritone") value="Bass-Baritone">Bass-Baritone</option>
+				<option @Model.IsVoicePart("Bari-Tenor")value="Bari-Tenor">Bari-Tenor</option>
+				<option @Model.IsVoicePart("Tenor") value="Tenor">Tenor</option>
+				<option @Model.IsVoicePart("Alto") value="Alto">Alto</option>
+				<option @Model.IsVoicePart("Mezzo") value="Mezzo">Mezzo</option>
+				<option @Model.IsVoicePart("Soprano") value="Soprano">Soprano</option>
+				<option @Model.IsVoicePart("Child") value="Child">Child</option>
+				<option @Model.IsVoicePart("Duet") value="Duet">Duet</option>
 			</select>
 
 		</p>
+		<input type="hidden" name="DatabaseId" value="@Model.DatabaseId"/>
 		<br />
 		<button>Submit!</button>
 	</div>

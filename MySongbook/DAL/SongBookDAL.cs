@@ -67,6 +67,32 @@ namespace MySongbook.DAL
 
 		}
 
+		public void UpdateSong(Song song)
+		{
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connectionString))
+				{
+					conn.Open();
+					SqlCommand cmd = new SqlCommand("UPDATE song SET title = @title, composer = @composer, lyricist = @lyricist, source_material = @source, genre = @genre, gender = @gender, voice_part = @voicepart WHERE song.song_number = @id;", conn);
+					cmd.Parameters.AddWithValue("@title", song.Title);
+					cmd.Parameters.AddWithValue("@composer", song.Composer);
+					cmd.Parameters.AddWithValue("@lyricist", song.Lyricist);
+					cmd.Parameters.AddWithValue("@source", song.Source);
+					cmd.Parameters.AddWithValue("@genre", song.Genre);
+					cmd.Parameters.AddWithValue("@gender", song.Gender);
+					cmd.Parameters.AddWithValue("@voicepart", song.VoicePart);
+					cmd.Parameters.AddWithValue("@id", song.DatabaseId);
+
+					cmd.ExecuteNonQuery();
+				}
+			}
+			catch(SqlException ex)
+			{
+				throw;
+			}
+		}
+
 		public Song IdSearch(int databaseId)
 		{
 			Song song = new Song();
