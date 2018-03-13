@@ -275,8 +275,7 @@
     <Content Include="Views\Home\SubmitSong.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
-    <Content Include="Views\Home\CorrectSong.cshtml" />
-    <Content Include="Views\Home\CorrectionSearch.cshtml" />
+    <Content Include="Views\Home\UpdateEntry.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

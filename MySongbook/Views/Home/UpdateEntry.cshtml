@@ -1,0 +1,86 @@
+﻿
+@{
+	ViewBag.Title = "UpdateEntry";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	@model MySongbook.Models.Song
+}
+
+<h2>Update Entry</h2>
+
+<table id="SearchResults">
+
+	<tr>
+		<th>Title</th>
+		<th>Source</th>
+		<th>Composer</th>
+		<th>Lyricist</th>
+		<th>Genre</th>
+		<th>Gender</th>
+		<th>Voice Part</th>
+	</tr>
+
+	<tr id="songDetails">
+		<td>@Model.Title</td>
+		<td>@Model.Source</td>
+		<td>@Model.Composer</td>
+		<td>@Model.Lyricist</td>
+		<td>@Model.Genre</td>
+		<td>@Model.Gender</td>
+		<td>@Model.VoicePart</td>
+
+	</tr>
+
+
+</table>
+
+<br />
+
+<form method="post" action="@Url.Action("SubmitSong", "Home")">
+	<div id="search">
+		<p>Title:<br /> @Html.TextBoxFor(s => s.Title, new { placeholder = "Enter the Song Title" })</p>
+		<p>Composer:<br /> @Html.TextBoxFor(s => s.Composer, new { placeholder = "Last, First" })</p>
+		<p>Lyricist:<br /> @Html.TextBoxFor(s => s.Lyricist, new { placeholder = "Last, First" })</p>
+		<p>Source Material:<br /> @Html.TextBoxFor(s => s.Source, new { placeholder = "Musical, Artist, Opera, etc." })</p>
+	</div>
+	<div id="search">
+		<p>
+			Category:<br />
+			<select name="Genre">
+				<option @Model.IsGenre("Contemporary Musical Theatre Uptempo") value="Contemporary Musical Theatre Uptempo">Contemporary Musical Theatre Uptempo</option>
+				<option @Model.IsGenre("Contemporary Musical Theatre Ballad") value="Contemporary Musical Theatre Ballad">Contemporary Musical Theatre Ballad</option>
+				<option @Model.IsGenre("Classical Musical Theatre Uptempo") value="Classical Musical Theatre Uptempo">Classical Musical Theatre Uptempo</option>
+				<option @Model.IsGenre("Classical Musical Theatre Ballad")value="Classical Musical Theatre Ballad">Classical Musical Theatre Ballad</option>
+				<option @Model.IsGenre("Pop/Rock/Country")value="Pop/Rock/Country">Pop/Rock/Country</option>
+				<option @Model.IsGenre("Jazz/Blues") value="Jazz/Blues">Jazz/Blues</option>
+				<option @Model.IsGenre("Comedic") value="Comedic">Comedic</option>
+				<option @Model.IsGenre("Disney") value="Disney">Disney</option>
+				<option @Model.IsGenre("Classical") value="Classical">Classical</option>
+			</select>
+		</p>
+		<p>
+			Gender:<br />
+			<select name="Gender">
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Either/Both">Either/Both</option>
+			</select>
+		</p>
+		<p>
+			Voice Part:<br />
+			<select name="VoicePart">
+				<option value="Bass-Baritone">Bass-Baritone</option>
+				<option value="Bari-Tenor">Bari-Tenor</option>
+				<option value="Tenor">Tenor</option>
+				<option value="Alto">Alto</option>
+				<option value="Mezzo">Mezzo</option>
+				<option value="Soprano">Soprano</option>
+				<option value="Child">Child</option>
+				<option value="Duet">Duet</option>
+			</select>
+
+		</p>
+		<br />
+		<button>Submit!</button>
+	</div>
+
+</form>

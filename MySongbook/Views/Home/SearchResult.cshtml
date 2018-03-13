@@ -17,19 +17,21 @@
 		<th>Genre</th>
 		<th>Gender</th>
 		<th>Voice Part</th>
+		<th>Edit</th>
 	</tr>
 
 	@foreach (var song in Model)
 	{
-		<tr id="songDetails">
-			<td>@song.Title</td>
-			<td>@song.Source</td>
-			<td>@song.Composer</td>
-			<td>@song.Lyricist</td>
-			<td>@song.Genre</td>
-			<td>@song.Gender</td>
-			<td>@song.VoicePart</td>
-		</tr>
+	<tr id="songDetails">
+		<td>@song.Title</td>
+		<td>@song.Source</td>
+		<td>@song.Composer</td>
+		<td>@song.Lyricist</td>
+		<td>@song.Genre</td>
+		<td>@song.Gender</td>
+		<td>@song.VoicePart</td>
+		<td><form method="get" action="@Url.Action("UpdateEntry", "Home")"><input type="hidden" name="DatabaseId" value="@song.DatabaseId" /><button>Edit</button></form></td>
+	</tr>
 	}
 
 </table>

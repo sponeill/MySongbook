@@ -67,6 +67,34 @@ namespace MySongbook.DAL
 
 		}
 
+		public Song IdSearch(int databaseId)
+		{
+			Song song = new Song();
+
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connectionString))
+				{
+					conn.Open();
+					SqlCommand cmd = new SqlCommand("SELECT * FROM song WHERE song_number = @databaseId;", conn);
+					cmd.Parameters.AddWithValue("@databaseId", databaseId);
+					SqlDataReader reader = cmd.ExecuteReader();
+					while(reader.Read())
+					{
+						song = MapRowToSong(reader);
+					}
+				}
+
+			}
+			catch(SqlException ex)
+			{
+				throw;
+			}
+
+			return song;
+		}
+
+
 		public List<Song> SearchSongs(string title, string composer, string lyricist, string source, string genre, string gender, string voicepart)
 		{
 			List<Song> results = new List<Song>();

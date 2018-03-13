@@ -15,5 +15,16 @@ namespace MySongbook.Models
 		public string Gender { get; set; }
 		public string VoicePart { get; set; }
 		public int DatabaseId { get; set; }
+
+		public string IsGenre(string genre)
+		{
+			string result = "";
+			if (genre == Genre)
+			{
+				result = "selected='selected'";
+			}
+
+			return result;
+		}
 	}
 }

@@ -66,24 +66,14 @@ namespace MySongbook.Controllers
 			return View("DisplayAllSongs", songs);
 		}
 
-		public ActionResult CorrectSong()
-		{
-			return View();
-		}
 
-		public ActionResult CorrectionSearch(SongSearchModel search)
+		public ActionResult UpdateEntry(int databaseId)
 		{
 			SongBookDAL dal = new SongBookDAL();
 
-			var songs = dal.SearchSongs(search.Title, search.Composer, search.Lyricist, search.Source, search.Genre, search.Gender, search.VoicePart);
+			Song song = dal.IdSearch(databaseId);
 
-			return View("CorrectionSearch", songs);
-			
-		}
-
-		public ActionResult UpdateEntry()
-		{
-			return View();
+			return View("UpdateEntry", song);
 		}
 	}
 }
