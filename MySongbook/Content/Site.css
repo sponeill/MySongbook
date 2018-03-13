@@ -1,6 +1,9 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: url('theatreseats.jpg') no-repeat fixed;
+	background-size: 100% 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -51,4 +54,42 @@ tr:nth-child(odd){
 
 footer #Copywright {
 	text-align: center;
+}
+
+.jumbotron {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.pageBox {
+	background: rgba(255, 255, 255, 0.8);
+	height: 500px;
+}
+
+.pageBox h2{
+	margin-left: 25px;
+	padding-top: 25px;
+	text-align: center;
+}
+
+.pageBox p{
+	margin-left: 25px;
+}
+
+.pageBox button{
+	margin-Left:25px;
+}
+.pageBoxFull #DisplayAllSongs{
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+.pageBoxFull h2 {
+	text-align: center;
+	padding-top: 25px;
+}
+
+.pageBoxFull {
+	background: rgba(255, 255, 255, 0.8);
+	height: 100%;
+	width: 100%;
 }
