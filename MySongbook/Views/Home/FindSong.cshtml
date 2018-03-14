@@ -6,10 +6,12 @@
 }
 
 <div class="pageBox">
-	<h2 class="pageElement">Find a Song</h2>
-	
-
 	<div class="inputForm">
+		<h2>Find a Song</h2>
+		<p id="subHeading"><strong>You may use any combination of these fields to narrow your search.</strong></p>
+
+
+
 		<form method="post" action="@Url.Action("SearchResult", "Home")">
 			<div id="search">
 				<p>Title:<br /> @Html.TextBoxFor(s => s.Title, new { placeholder = "Enter the Song Title" })</p>

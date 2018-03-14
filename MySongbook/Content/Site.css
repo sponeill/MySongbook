@@ -58,14 +58,14 @@ footer #Copywright {
 	text-align: center;
 }
 
-.jumbotron {
+/*.jumbotron {
 	background: rgba(255, 255, 255, 0.6);
-}
+}*/
 
-.pageBox {
+/*.pageBox {
 	background: rgba(255, 255, 255, 0.6);
 	height: 500px;
-}
+}*/
 
 .pageBox h2{
 	margin-left: 25px;
@@ -96,11 +96,52 @@ footer #Copywright {
 	width: 100%;
 }
 
-.inputForm{
-	background: #FFF;
+.inputForm {
+	/*background: #FFF;*/
+	background-image: url('old-paper-backgrounds-wallpapers.png');
+	background-size: 100% 100%;
 	width: 50%;
-	margin-left: 25px;
-	box-shadow: 1px 1px 3px black;
-	margin-top: 20px;
+	padding-left: 15px;
+	/*box-shadow: 1px 1px 3px black;*/
+	margin-top: 10%;
+	padding-bottom: 50px;
 }
 
+.paper {
+	width: 50%;
+	float: left;
+	background-image: url('old-paper-backgrounds-wallpapers.png');
+	background-size: 100% 100%;
+}
+
+.homePage h4{
+	margin-left: 45px;
+	margin-right: 45px;
+}
+
+.homePage h2{
+	padding-top: 35px;
+	text-align: center;
+}
+
+.inputForm h2{
+	padding-top: 35px;
+}
+
+#subHeading{
+	text-align: center;
+}
+
+.homePage p{
+	margin-right: 50px;
+	text-align: left;
+}
+
+.homePage {
+	background-image: url('old-paper-backgrounds-wallpapers.png');
+	background-size: 100% 100%;
+	width: 50%;
+	padding-left: 15px;
+	margin-top: 10%;
+	padding-bottom: 50px;
+}

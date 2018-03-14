@@ -5,7 +5,7 @@
 	@model IList<MySongbook.Models.Song>
 }
 
-<div class="pageBox">
+<div class="pageBoxFull">
 	<h2>Search Results</h2>
 	<br />
 	<table id="SearchResults">
@@ -34,6 +34,6 @@
 				<td><form method="get" action="@Url.Action("UpdateEntry", "Home")"><input type="hidden" name="DatabaseId" value="@song.DatabaseId" /><button>Edit</button></form></td>
 			</tr>
 		}
-
+		
 	</table>
 </div>

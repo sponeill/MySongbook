@@ -6,9 +6,11 @@
 }
 
 <div class="pageBox">
-	<h2>Submit a Song</h2>
-
 	<div class="inputForm">
+		<h2>Submit a Song</h2>
+		<p><strong>This site is dependant upon user input and correct information. Please double check your information before subitting!</strong></p>
+
+
 		<form method="post" action="@Url.Action("SubmitSong", "Home")">
 			<div id="search">
 				<p>Title:<br /> @Html.TextBoxFor(s => s.Title, new { placeholder = "Enter the Song Title" })</p>
