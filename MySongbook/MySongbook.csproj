@@ -223,7 +223,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\old-paper-backgrounds-wallpapers.png" />
     <Content Include="Content\piano.jpg" />
-    <Content Include="Content\theatreseats.jpg" />
     <Content Include="Content\white-notepaper.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

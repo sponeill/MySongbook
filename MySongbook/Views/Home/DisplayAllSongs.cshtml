@@ -1,19 +1,20 @@
 ﻿
 @{
-    ViewBag.Title = "DisplayAllSongs";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "DisplayAllSongs";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 	@model IList<MySongbook.Models.Song>
-	
+
 }
 
 <div class="pageBoxFull">
-	<h2>Database Contents</h2>
 	<br />
+	<h2>Database Contents</h2>
+	<hr />
 
 	<table id="DisplayAllSongs">
 
 		<tr>
-			<th>Title</th>
+			<th class="left_column">Title</th>
 			<th>Source</th>
 			<th>Composer</th>
 			<th>Lyricist</th>
@@ -26,7 +27,7 @@
 		@foreach (var song in Model)
 		{
 			<tr id="songDetails">
-				<td>@song.Title</td>
+				<td class="left_column">@song.Title</td>
 				<td>@song.Source</td>
 				<td>@song.Composer</td>
 				<td>@song.Lyricist</td>
@@ -38,4 +39,7 @@
 		}
 
 	</table>
+	<hr />
+	<br />
 </div>
+<div id="bottomMargin"></div>
