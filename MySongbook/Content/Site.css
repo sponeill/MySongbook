@@ -1,7 +1,7 @@
 ﻿
 #homeImage {
 	background: url('piano.jpg') no-repeat fixed;
-	height: 600px;
+	height: 90vh;
 	margin: 0;
 	padding: 200px 0 260px 0;
 	background-size: cover;
@@ -18,6 +18,16 @@
 	overflow: hidden;
 	padding-top: 25px;
 	padding-bottom: 65px;
+	height:90vh;
+}
+
+#homePage {
+	background-color: rgb(253, 253, 253);
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 25px;
+	padding-bottom: 65px;
+	height: 350px;
 }
 
 
@@ -97,32 +107,25 @@ footer #Copywright {
 	margin-top: 50px;
 }
 
-.inputForm {
+.tab-content{
 	/*background: #FFF;*/
 	background-image: url('old-paper-backgrounds-wallpapers.png');
 	background-size: 100% 100%;
 	width: 50%;
-	padding-left: 15px;
-	/*box-shadow: 1px 1px 3px black;*/
-	margin-top: 10%;
-	padding-bottom: 50px;
-}
+	height: 100%;
+	padding-left: 35px;
+	}
 
-.paper {
-	width: 50%;
-	float: left;
-	background-image: url('old-paper-backgrounds-wallpapers.png');
-	background-size: 100% 100%;
-}
 
-.homePage h4, .subPage h4{
+#homePage h4, .subPage h4{
 	margin-left: 45px;
 	margin-right: 45px;
 	text-align: center;
+	padding-top: 15px;
 }
 
-.homePage h2 {
-	padding-top: 5px;
+#homePage h2 {
+	padding-top: 15px;
 	margin-top: 5px;
 	text-align: center;
 }
@@ -136,7 +139,7 @@ footer #Copywright {
 	text-align: center;
 }
 
-.homePage p, .homePage li, .subPage p, .subPage li {
+#homePage p, #homePage li, .subPage p, .subPage li {
 	text-align: left;
 	margin-left: 45px;
 	margin-right: 45px;
@@ -159,6 +162,7 @@ footer #Copywright {
 	height: 90px;
 	bottom: 0;
 	width: 100%;
+	height: 100px;
 }
 /*footer {
 	position: fixed;
