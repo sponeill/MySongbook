@@ -11,7 +11,7 @@
 	<table id="SearchResults">
 
 		<tr>
-			<th>Title</th>
+			<th class="left_column">Title</th>
 			<th>Source</th>
 			<th>Composer</th>
 			<th>Lyricist</th>
@@ -24,7 +24,7 @@
 		@foreach (var song in Model)
 		{
 			<tr id="songDetails">
-				<td>@song.Title</td>
+				<td class="left_column">@song.Title</td>
 				<td>@song.Source</td>
 				<td>@song.Composer</td>
 				<td>@song.Lyricist</td>
@@ -36,4 +36,5 @@
 		}
 		
 	</table>
+	<br />
 </div>

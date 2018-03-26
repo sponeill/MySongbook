@@ -107,15 +107,6 @@ footer #Copywright {
 	margin-top: 50px;
 }
 
-.tab-content{
-	/*background: #FFF;*/
-	background-image: url('old-paper-backgrounds-wallpapers.png');
-	background-size: 100% 100%;
-	width: 50%;
-	height: 100%;
-	padding-left: 35px;
-	}
-
 
 #homePage h4, .subPage h4{
 	margin-left: 45px;
@@ -182,4 +173,31 @@ footer #Copywright {
 
 #bottomMargin {
 	height: 20px;
+}
+
+select {
+	padding-bottom: 7px;
+}
+
+#homeImage .homeTitle {
+	color: white;
+	float: left;
+	text-align: left;
+	display: block;
+	margin-bottom: 0;
+	padding-left: 60px;
+	animation-name: fadeIn;
+	animation-duration: 2.5s;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+	from {padding-left: 80px;}
+	to {padding-left: 60px;}
+}
+
+@keyframes rightToLeft {
+	from {padding-left: 80px;}
+	to {padding-left: 60px;}
 }
