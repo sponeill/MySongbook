@@ -1,7 +1,20 @@
 ﻿
 #homeImage {
 	background: url('piano.jpg') no-repeat fixed;
-	height: 90vh;
+	height: 5vh;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#subpageImage {
+	background: url('piano.jpg') no-repeat fixed;
+	height: 5vh;
 	margin: 0;
 	padding: 200px 0 260px 0;
 	background-size: cover;
@@ -18,7 +31,7 @@
 	overflow: hidden;
 	padding-top: 25px;
 	padding-bottom: 65px;
-	height:90vh;
+	height: 90vh;
 }
 
 #homePage {
@@ -35,14 +48,14 @@
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+	white-space: normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+	max-width: 280px;
 }
 
 #DisplayAllSongs {
@@ -53,23 +66,44 @@ textarea {
 	font-size: 12px;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
 	background: #CCC;
 }
 
-tr:nth-child(odd){
+tr:nth-child(odd) {
 	background: #FFF;
 }
 
 #search {
-	display:inline-block;
+	display: inline-block;
 	vertical-align: top;
 	margin-right: 25px;
 	padding-top: 15px;
 	padding-bottom: 10px;
 }
 
-#SearchResults{
+#sideBox {
+	text-align: center;
+	background-color: lightgray;
+	color: #222222;
+	width: 30%;
+	height: 30%;
+	margin-top: 25px;
+	border-radius: 7px;
+	box-shadow: 1px 1px black;
+}
+
+#sideBox h4{
+	padding: 15px;
+}
+
+.formSideBar {
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+#SearchResults {
 	width: 100%;
 }
 
@@ -77,20 +111,21 @@ footer #Copywright {
 	text-align: center;
 }
 
-.pageBox h2{
+.pageBox h2 {
 	margin-left: 25px;
 	padding-top: 25px;
 	text-align: center;
 }
 
-.pageBox p{
+.pageBox p {
 	margin-left: 25px;
 }
 
-.pageBox button{
-	margin-Left:25px;
+.pageBox button {
+	margin-Left: 25px;
 }
-.pageBoxFull #DisplayAllSongs{
+
+.pageBoxFull #DisplayAllSongs {
 	margin-right: 15px;
 	margin-bottom: 15px;
 }
@@ -108,12 +143,17 @@ footer #Copywright {
 }
 
 
-#homePage h4, .subPage h4{
-	margin-left: 45px;
-	margin-right: 45px;
-	text-align: center;
-	padding-top: 15px;
-}
+	#homePage h4, .subPage h4, .pageBoxFull h4 {
+		margin-left: 45px;
+		margin-right: 45px;
+		text-align: center;
+		padding-top: 15px;
+	}
+
+	.pageBoxFull h4 {
+		padding-top: 0px;
+		text-align: center;
+	}
 
 #homePage h2 {
 	padding-top: 15px;
@@ -121,12 +161,12 @@ footer #Copywright {
 	text-align: center;
 }
 
-.inputForm h2{
+.inputForm h2 {
 	padding-top: 35px;
 	text-align: center;
 }
 
-#subHeading{
+#subHeading {
 	text-align: center;
 }
 
@@ -136,7 +176,7 @@ footer #Copywright {
 	margin-right: 45px;
 }
 
-.subPage h2{
+.subPage h2 {
 	padding-top: 25px;
 	text-align: center;
 }
@@ -163,7 +203,7 @@ footer #Copywright {
 	width: 100%;
 }*/
 
-.quote{
+.quote {
 	padding-top: 25px;
 }
 
@@ -179,7 +219,7 @@ select {
 	padding-bottom: 7px;
 }
 
-#homeImage .homeTitle {
+#homeImage .homeTitle, #subpageImage .homeTitle {
 	color: white;
 	float: left;
 	text-align: left;
@@ -191,13 +231,19 @@ select {
 }
 
 @keyframes fadeIn {
-	from {opacity: 0;}
-	to {opacity: 1;}
-	from {padding-left: 80px;}
-	to {padding-left: 60px;}
-}
+	from {
+		opacity: 0;
+	}
 
-@keyframes rightToLeft {
-	from {padding-left: 80px;}
-	to {padding-left: 60px;}
+	to {
+		opacity: 1;
+	}
+
+	from {
+		padding-left: 80px;
+	}
+
+	to {
+		padding-left: 60px;
+	}
 }
