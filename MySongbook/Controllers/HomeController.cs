@@ -20,11 +20,6 @@ namespace MySongbook.Controllers
 			return View();
 		}
 
-		public ActionResult Forum()
-		{
-			return View();
-		}
-
 		public ActionResult SubmitSong()
 		{
 			return View();

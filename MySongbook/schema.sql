@@ -100,6 +100,16 @@ CREATE TABLE userInfo_song
 
 );
 
+CREATE TABLE Forum
+(
+	post_id int identity(1, 1),
+	forum_post varchar(500) not null,
+	display_name varchar(30) not null,
+
+	CONSTRAINT pk_id PRIMARY KEY(post_id),
+);
+
+
 -- Starter Song Data --
 
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Dancing Through Life', 'Schwartz, Stephen', 'Schwartz, Stephen','Wicked', 'Contemporary Musical Theatre Uptempo', 'Male', 'Tenor')
@@ -124,3 +134,5 @@ INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voi
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Perfect', 'Morissette, Alanis', 'Morissette, Alanis', 'Alanis Morissette', 'Pop/Rock/Country', 'Female', 'Mezzo')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Go the Distance', 'Menken, Alan', 'Zippel, David', 'Hercules', 'Disney', 'Male', 'Tenor')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('One Second and a Million Miles', 'Brown, Jason Robert', 'Brown, Jason Robert', 'The Bridges of Madison County', 'Contemporary Musical Theatre Ballad', 'Either/Both', 'Duet')
+
+INSERT INTO forum (forum_post, display_name) VALUES ('Feel free to leave a note for your fellow voice teachers! Find a useful link or article? Share it here!', 'Shane');
