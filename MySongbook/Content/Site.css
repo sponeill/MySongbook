@@ -230,6 +230,17 @@ select {
 	animation-duration: 2.5s;
 }
 
+#contactForm {
+	width: 30%;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+#contactForm textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
