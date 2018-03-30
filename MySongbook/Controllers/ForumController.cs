@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MySongbook.DAL;
+using MySongbook.Models;
 
 namespace MySongbook.Controllers
 {
@@ -16,6 +17,20 @@ namespace MySongbook.Controllers
 			var posts = dal.GetForumPosts();
 
 			return View("Forum", posts);
+		}
+
+		[HttpGet]
+		public ActionResult NewPost()
+		{
+			return View("NewPost");
+		}
+
+		[HttpPost]
+		public ActionResult NewPost(ForumPostModel post, ForumDAL dal)
+		{
+			dal.AddNewPost(post);
+
+			return RedirectToAction("Forum");
 		}
 	}
 }

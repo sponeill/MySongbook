@@ -35,11 +35,31 @@ namespace MySongbook.DAL
 			}
 			catch (SqlException ex)
 			{
-				Console.WriteLine(ex);
+				throw;
 			}
 
 			return posts;
 		}
 
+		public void AddNewPost(ForumPostModel post)
+		{
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connectionString))
+				{
+					conn.Open();
+					SqlCommand cmd = new SqlCommand("INSERT INTO forum (forum_post, display_name) VALUES (@forum_post, @display_name);", conn);
+					cmd.Parameters.AddWithValue("@display_name", post.display_name);
+					cmd.Parameters.AddWithValue("@forum_post", post.forum_post);
+					cmd.ExecuteNonQuery();
+				}
+
+			}
+			catch (SqlException ex)
+			{
+				throw;
+			}
+			
+		}
 	}
 }

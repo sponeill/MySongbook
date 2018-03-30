@@ -8,10 +8,12 @@
 
 <section id="subpageImage">
 	<h2 class="homeTitle">Forum</h2>
+	<h4 class="homeTitle"> <em>Leave a note for your fellow musicians.</em></h4>
 </section>
 
 <section id="page2">
-	<table style="margin-left: auto; margin-right: auto;">
+	<a href="@Url.Action("NewPost", "Forum")" id="newPostLink">Submit a new post!</a>
+	<table style="margin-left: auto; margin-right: auto;" id="forumTable">
 		<tr>
 			<th class="left_column">Name</th>
 			<th class="left_column">Post</th>

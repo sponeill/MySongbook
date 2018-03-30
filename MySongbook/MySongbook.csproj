@@ -283,6 +283,7 @@
     <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Home\SearchResult.cshtml" />
     <Content Include="Views\Home\UpdateEntry.cshtml" />
+    <Content Include="Views\Forum\NewPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

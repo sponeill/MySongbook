@@ -241,6 +241,18 @@ select {
 	max-width: 100%;
 }
 
+#newPostLink {
+	margin-left: 40vw;
+	margin-right: 40vw;
+	text-align: center;
+	width: 20vw;
+}
+
+#forumTable {
+	width: 80vw;
+	font-size:medium;
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
