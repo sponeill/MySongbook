@@ -13,17 +13,19 @@
 
 <section id="page2">
 	<a href="@Url.Action("NewPost", "Forum")" id="newPostLink">Submit a new post!</a>
+	<hr />
+	<br />
 	<table style="margin-left: auto; margin-right: auto;" id="forumTable">
 		<tr>
-			<th class="left_column">Name</th>
-			<th>Date</th>
+			<th class="left_column" style="width: 15vw">Name</th>
+			<th style="width: 15vw">Date</th>
 			<th class="left_column">Post</th>
 		</tr>
 		@foreach (var post in Model)
 		{
 			<tr>
-				<td class="left_column">@post.display_name</td>
-				<td>@post.post_date.ToShortDateString()</td>
+				<td class="left_column" style="width: 15vw">@post.display_name</td>
+				<td style="width: 15vw">@post.post_date.ToShortDateString()</td>
 				<td class="left_column">@post.forum_post</td>
 			</tr>
 		}
