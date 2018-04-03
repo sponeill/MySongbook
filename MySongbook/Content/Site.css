@@ -31,7 +31,7 @@
 	overflow: hidden;
 	padding-top: 25px;
 	padding-bottom: 65px;
-	height: 90vh;
+	/*height: 90vh;*/
 }
 
 #homePage {
@@ -179,6 +179,15 @@ footer #Copywright {
 .subPage h2 {
 	padding-top: 25px;
 	text-align: center;
+}
+
+.subPage form {
+	width: 60vw;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	padding: 15px;
+	background-color: lightgray;
+	border:thin solid black;
 }
 
 .quote {

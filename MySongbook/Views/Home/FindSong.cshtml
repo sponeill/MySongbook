@@ -18,14 +18,14 @@
 		<div class="formSideBar">
 			<form method="post" action="@Url.Action("SearchResult", "Home")">
 				<div id="search">
-					<p>Title:<br /> @Html.TextBoxFor(s => s.Title, new { placeholder = "Enter the Song Title" })</p>
-					<p>Composer:<br /> @Html.TextBoxFor(s => s.Composer, new { placeholder = "Last, First" })</p>
-					<p>Lyricist:<br /> @Html.TextBoxFor(s => s.Lyricist, new { placeholder = "Last, First" })</p>
-					<p>Source Material:<br /> @Html.TextBoxFor(s => s.Source, new { placeholder = "Musical, Artist, Opera, etc." })</p>
+					<p><strong>Title:</strong><br /> @Html.TextBoxFor(s => s.Title, new { placeholder = "Enter the Song Title" })</p>
+					<p><strong>Composer:</strong><br /> @Html.TextBoxFor(s => s.Composer, new { placeholder = "Last, First" })</p>
+					<p><strong>Lyricist:</strong><br /> @Html.TextBoxFor(s => s.Lyricist, new { placeholder = "Last, First" })</p>
+					<p><strong>Source Material:</strong><br /> @Html.TextBoxFor(s => s.Source, new { placeholder = "Musical, Artist, Opera, etc." })</p>
 				</div>
 				<div id="search">
-					<p>
-						Category:<br />
+					<p><strong>Category:</strong>
+						<br />
 						<select name="Genre">
 							<option value="">(No Specification)</option>
 							<option value="Contemporary Musical Theatre Uptempo">Contemporary Musical Theatre Uptempo</option>
@@ -39,8 +39,8 @@
 							<option value="Classical">Classical</option>
 						</select>
 					</p>
-					<p>
-						Gender:<br />
+					<p><strong>Gender:</strong>
+						<br />
 						<select name="Gender">
 							<option value="">(No Specification)</option>
 							<option value="Male">Male</option>
@@ -48,8 +48,8 @@
 							<option value="Either/Both">Either/Both</option>
 						</select>
 					</p>
-					<p>
-						Voice Part:<br />
+					<p><strong>Voice Part:</strong>
+						<br />
 						<select name="VoicePart">
 							<option value="">(No Specification)</option>
 							<option value="Bass-Baritone">Bass-Baritone</option>
@@ -68,6 +68,8 @@
 				</div>
 			</form>
 		</div>
+
+		<hr />
 
 		@*<div class="formSideBar" id="sideBox">
 			<h4>You may use any number of these fields to conduct your search!</h4>
