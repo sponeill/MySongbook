@@ -105,6 +105,7 @@ CREATE TABLE Forum
 	post_id int identity(1, 1),
 	forum_post varchar(500) not null,
 	display_name varchar(30) not null,
+	post_date DateTime not null,
 
 	CONSTRAINT pk_id PRIMARY KEY(post_id),
 );

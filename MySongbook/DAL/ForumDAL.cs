@@ -48,9 +48,10 @@ namespace MySongbook.DAL
 				using (SqlConnection conn = new SqlConnection(connectionString))
 				{
 					conn.Open();
-					SqlCommand cmd = new SqlCommand("INSERT INTO forum (forum_post, display_name) VALUES (@forum_post, @display_name);", conn);
+					SqlCommand cmd = new SqlCommand("INSERT INTO forum (forum_post, display_name, post_date) VALUES (@forum_post, @display_name, @post_date);", conn);
 					cmd.Parameters.AddWithValue("@display_name", post.display_name);
 					cmd.Parameters.AddWithValue("@forum_post", post.forum_post);
+					cmd.Parameters.AddWithValue("@post_date", post.post_date);
 					cmd.ExecuteNonQuery();
 				}
 

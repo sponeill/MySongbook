@@ -16,6 +16,7 @@
 	<form method="post" action="@Url.Action("NewPost", "Forum")" id="contactForm">
 		<label>Name: <br />@Html.TextBoxFor(p => p.display_name, new { placeholder = "Enter your name" })</label><br />
 		<label>Post: <br />@Html.TextAreaFor(p => p.forum_post, new { placeholder = "Enter your post", style = "width: 25vw; height: 15vh;" })</label><br />
+		@Html.HiddenFor(p => p.post_date, new { @value = DateTime.UtcNow });
 		<button>Submit!</button>
 	</form>
 </section>

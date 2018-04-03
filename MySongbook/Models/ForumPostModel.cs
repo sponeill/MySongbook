@@ -9,5 +9,14 @@ namespace MySongbook.Models
 	{
 		public string display_name { get; set; }
 		public string forum_post { get; set; }
+		public DateTime post_date {
+			get
+			{
+				return DateTime.Now;
+			}
+			set
+			{
+			}
+		}
 	}
 }
