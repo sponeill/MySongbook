@@ -28,6 +28,7 @@ namespace MySongbook.DAL
 						ForumPostModel post = new ForumPostModel();
 						post.display_name = Convert.ToString(reader["display_name"]);
 						post.forum_post = Convert.ToString(reader["forum_post"]);
+						post.post_date = Convert.ToDateTime(reader["post_date"]);
 						posts.Add(post);
 						
 					}

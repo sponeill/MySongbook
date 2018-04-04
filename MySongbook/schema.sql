@@ -135,5 +135,12 @@ INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voi
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Perfect', 'Morissette, Alanis', 'Morissette, Alanis', 'Alanis Morissette', 'Pop/Rock/Country', 'Female', 'Mezzo')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Go the Distance', 'Menken, Alan', 'Zippel, David', 'Hercules', 'Disney', 'Male', 'Tenor')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('One Second and a Million Miles', 'Brown, Jason Robert', 'Brown, Jason Robert', 'The Bridges of Madison County', 'Contemporary Musical Theatre Ballad', 'Either/Both', 'Duet')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Popular', 'Schwartz, Stephen', 'Schwartz, Stephen', 'Wicked', 'Contemporary Musical Theatre Uptempo', 'Female', 'Mezzo')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Theres a Fine Fine Line', 'Lopez, Robert', 'Marx, Jeff', 'Avenue Q', 'Contemporary Musical Theatre Ballad', 'Female', 'Mezzo')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Purpose', 'Lopez, Robert', 'Marx, Jeff', 'Avenue Q', 'Contemporary Musical Theatre Uptempo', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Her Voice', 'Menken, Alan', 'Slater, Glenn', 'The Little Mermaid', 'Disney', 'Male', 'Tenor')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('How Far Ill Go', 'Miranda, Lin-Manuel', 'Miranda, Lin-Manuel', 'Moana', 'Disney', 'Female', 'Mezzo')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('My White Knight', 'Wilson, Meredith','Wilson, Meredith', 'The Music Man', 'Classical Musical Theatre Ballad', 'Female', 'Soprano')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Trouble', 'Wilson, Meredith','Wilson, Meredith', 'The Music Man', 'Classical Musical Theatre Uptempo', 'Male', 'Bass-Baritone')
 
 INSERT INTO forum (forum_post, display_name) VALUES ('Feel free to leave a note for your fellow voice teachers! Find a useful link or article? Share it here!', 'Shane');
