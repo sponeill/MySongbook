@@ -142,5 +142,6 @@ INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voi
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('How Far Ill Go', 'Miranda, Lin-Manuel', 'Miranda, Lin-Manuel', 'Moana', 'Disney', 'Female', 'Mezzo')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('My White Knight', 'Wilson, Meredith','Wilson, Meredith', 'The Music Man', 'Classical Musical Theatre Ballad', 'Female', 'Soprano')
 INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('Trouble', 'Wilson, Meredith','Wilson, Meredith', 'The Music Man', 'Classical Musical Theatre Uptempo', 'Male', 'Bass-Baritone')
+INSERT INTO song (title, composer, lyricist, source_material, genre, gender, voice_part) VALUES('I Could Have Danced All Night', 'Loewe, Frederick', 'Lerner, Alan Jay', 'My Fair Lady', 'Classical Musical Theatre Ballad', 'Female', 'Soprano')
 
 INSERT INTO forum (forum_post, display_name) VALUES ('Feel free to leave a note for your fellow voice teachers! Find a useful link or article? Share it here!', 'Shane');
